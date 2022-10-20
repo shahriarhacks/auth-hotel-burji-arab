@@ -26,7 +26,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/products/:id', element: <PrivetRouter><ProductDetails /></PrivetRouter>,
-              
+                loader: ({ params }) => fetch(`https://fakestoreapi.com/products/${params.id}`)
             },
             {
                 path: 'pricing', element: <PrivetRouter><Pricing /></PrivetRouter>
