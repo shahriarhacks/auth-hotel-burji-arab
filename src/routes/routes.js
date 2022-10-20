@@ -8,6 +8,7 @@ import Product from "../components/Product";
 import ProductDetails from "../components/ProductDetails";
 import Root from "../components/Root";
 import SingUp from "../components/SingUp";
+import PrivetRouter from "./PrivetRouter";
 
 const routes = createBrowserRouter([
     {
@@ -24,10 +25,11 @@ const routes = createBrowserRouter([
                 path: '/features', element: <Features />
             },
             {
-                path:'/products/:id', element:<ProductDetails/>
+                path: '/products/:id', element: <PrivetRouter><ProductDetails /></PrivetRouter>,
+              
             },
             {
-                path: 'pricing', element: <Pricing />
+                path: 'pricing', element: <PrivetRouter><Pricing /></PrivetRouter>
             },
             {
                 path: 'about', element: <About />
